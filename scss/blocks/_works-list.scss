@@ -1,0 +1,82 @@
+.works-list {
+  @include list-unstyled;
+  display: flex;
+}
+
+.works-list__item {
+  position: relative;
+
+  &:not(:last-child) {
+    padding-right: 95px;
+
+    &::before {
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: -82px;
+      left: 15px;
+      background-color: #fdd6ba;
+      content: "";
+    }
+  }
+
+  &::after {
+    width: 31px;
+    height: 31px;
+    position: absolute;
+    top: -82px;
+    left: 0;
+    border: 2px solid #0e8784;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    content: "";
+  }
+}
+
+.works-list--dark .works-list__item {
+  &::after {
+    background-color: transparent;
+  }
+}
+
+.works-list__number {
+  margin-bottom: 38px;
+  display: inline-block;
+  color: #fdd6ba;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 72px; /* 100% */
+}
+
+.works-list--dark .works-list__title {
+  color: #fefcf7;
+}
+
+.works-list__title {
+  max-width: 255px;
+  margin-top: 0;
+  margin-bottom: 42px;
+  color: #333d4b;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 36px;
+}
+
+.works-list--dark .works-list__description {
+  color: #fefcf7;
+}
+
+.works-list__description {
+  max-width: 285px;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #333d4b;
+  font-family: "Barlow";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; /* 162.5% */
+}

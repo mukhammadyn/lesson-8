@@ -1,0 +1,25 @@
+.main-link {
+  padding: 15px 36px 16px 36px;
+  color: #fefcf7;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 25px;
+  background-color: $primary-color;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #66d2cf;
+  }
+
+  &:disabled {
+    background-color: #e2dedb;
+  }
+}
+
+.main-link--disabled {
+  background-color: #e2dedb;
+  pointer-events: none;
+}

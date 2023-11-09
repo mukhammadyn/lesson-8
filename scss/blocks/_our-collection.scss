@@ -1,0 +1,54 @@
+.our-collection {
+  padding-top: 136px;
+  padding-bottom: 200px;
+}
+
+.our-collection__heading {
+  margin-top: 0;
+  margin-bottom: 0;
+  background-color: #83888f;
+  color: transparent;
+  text-align: center;
+  font-size: 150px;
+  font-weight: 900;
+  background-image: -webkit-linear-gradient(
+    270deg,
+    rgba(254, 252, 247, 0) 0%,
+    #fefcf7 100%
+  );
+  -webkit-background-clip: text;
+}
+
+.our-collection__list {
+  @include list-unstyled;
+  display: flex;
+  margin-top: -80px;
+}
+
+.our-collection__item {
+  width: calc(100% / 4 - 30px);
+  margin-left: 30px;
+  text-align: center;
+  color: #333d4b;
+}
+
+.our-collection__item-img {
+  margin-bottom: 72px;
+}
+
+.our-collection__item-title {
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.our-collection__item-desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-family: "Barlow";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+}

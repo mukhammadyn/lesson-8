@@ -1,0 +1,137 @@
+.order {
+  padding: 168px 85px;
+}
+
+.order__form {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.order__form-nav-list {
+  @include list-unstyled;
+}
+
+.order__form-nav-item {
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(131, 136, 143, 0.25);
+  }
+
+  &:not(:first-child) {
+    .order__form-nav-link {
+      padding-top: 24px;
+    }
+  }
+}
+
+.order__form-nav-link {
+  display: flex;
+  color: #333d4b;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 32px;
+  padding-bottom: 24px;
+  text-decoration: none;
+  opacity: 0.4;
+
+  &::before {
+    content: "01";
+    margin-right: 28px;
+  }
+}
+
+.order__form-nav-link--active {
+  opacity: 1;
+
+  &::before {
+    color: $primary-color;
+  }
+}
+
+.order__main {
+  max-width: 730px;
+}
+
+.order__main-accordion {
+  @include list-unstyled;
+}
+
+.order__main-accordion-item {
+  &:not(:last-child) {
+    margin-bottom: 88px;
+  }
+}
+
+.order__main-accordion-top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.order__main-accordion-title {
+  color: #83888f;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 48px;
+}
+
+.order__main-accordion-item--active .order__main-accordion-arrow {
+  transform: rotate(180deg);
+}
+
+.order__main-accordion-arrow {
+  transition: transform 0.3s ease;
+}
+
+.order__main-accordion-radios {
+  display: none;
+  margin-top: 56px;
+}
+
+.order__main-accordion-item--active .order__main-accordion-radios {
+  display: flex;
+}
+
+.order__main-accordion-radio {
+  display: block;
+
+  &:not(:last-child) {
+    margin-right: 23px;
+  }
+}
+
+.order__main-accordion-custom-input {
+  display: block;
+  padding: 32px 28px 28px;
+  background-color: #f4f1eb;
+  border-radius: 8px;
+  color: #333d4b;
+}
+
+.order__main-accordion-input:checked + .order__main-accordion-custom-input {
+  background-color: $primary-color;
+  color: #f4f1eb;
+}
+
+.order__main-accordion-custom-title {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 32px;
+}
+
+.order__main-accordion-desc {
+  display: inline-block;
+  font-family: "Barlow";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+}
